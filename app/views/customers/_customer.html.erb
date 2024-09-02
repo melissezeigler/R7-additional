@@ -15,3 +15,14 @@
   </p>
 
 </div>
+
+<% if @customer.present? %>
+  <% if @customer.orders.present? %>
+    <!-- Display orders -->
+  <% else %>
+    <p>No orders found.</p>
+  <% end %>
+<% else %>
+  <p>Customer not found.</p>
+<% end %>
+
